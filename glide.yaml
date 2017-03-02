@@ -1,0 +1,2 @@
+subpackage: github.com/tkausch/collidermain
+import: [github.com/webrtc/apprtc/src/collider/collider]
