@@ -14,7 +14,7 @@ import (
 )
 
 var tls = flag.Bool("tls", false, "whether TLS is used")
-var roomSrv = flag.String("room-server", "https://smas-collider-pre.scapp-corp.swisscom.com", "The origin of the room server")
+
 
 func main() {
   flag.Parse()
@@ -24,11 +24,17 @@ func main() {
     port = "8090"
   }
 
-  log.Printf("Starting collider: tls = %t, port = %s, room-server=%s", *tls, port, *roomSrv)
+  var roomSrv string
+  if roomSrv = os.Getenv("ROOM_SRV"); len(roomSrv) == 0 {
+    roomSrv = "https://appr.tc/"
+  }
+
+
+  log.Printf("Starting collider: tls = %t, port = %s, room-server=%s", *tls, port, roomSrv)
 
 
   portValue, _ := strconv.Atoi(port)  
 
-  c := collider.NewCollider(*roomSrv)
+  c := collider.NewCollider(roomSrv)
   c.Run(portValue, *tls)
 }
