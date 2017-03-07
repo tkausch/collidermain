@@ -32,4 +32,11 @@ glide up
 ```
 cf push mycollider
 ```
+
+# Configure Collider Environment
+
+To define your room server you can set the following environment variable 
+```
+ROOM_SRV = https://appr.tc
+```
  
