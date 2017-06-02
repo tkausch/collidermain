@@ -28,6 +28,7 @@ brew install glide
 ```
 cd $GOPATH/src/github.com/tkausch/collidermain
 glide up
+glide install (this installs all depencies so they can be pushed to cloudfoundry)
 ```
 
 3. Login into Cloud Foundry and push the go app:
