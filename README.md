@@ -12,7 +12,8 @@ go get github.com/tkausch/collidermain
 
 3. Now you should be able to run ```mycollider``` locally
 ```
-UM00339:collidermain tzhkath4$ go run mycollider.go 
+$ cd $GOPATH/src/github.com/tkausch/collidermain
+$ go run mycollider.go 
 2017/03/07 16:32:13 Starting collider: tls = false, port = 8090, room-server=https://appr.tc/
 ```
 
@@ -23,8 +24,9 @@ UM00339:collidermain tzhkath4$ go run mycollider.go
 brew install glide
 ```  
 
-2. Update dependencies 
+2. Update dependencies with glide
 ```
+cd $GOPATH/src/github.com/tkausch/collidermain
 glide up
 ```
 
