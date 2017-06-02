@@ -25,11 +25,11 @@ $ go run mycollider.go
 brew install glide
 ```  
 
-2. Update dependencies with glide
+2. Update dependencies with glide. This installs all depencies so they can be pushed to cloudfoundry.
 ```
 cd $GOPATH/src/github.com/tkausch/collidermain
 glide up
-glide install (this installs all depencies so they can be pushed to cloudfoundry)
+glide install 
 ```
 
 3. Login into Cloud Foundry and push the go app:
