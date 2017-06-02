@@ -30,7 +30,7 @@ brew install glide
 ```
 cd $GOPATH/src/github.com/tkausch/collidermain
 glide up
-(optional:) glide install 
+glide install #optional 
 ```
 
 3. Login into Cloud Foundry and push the go app. When running ```cf push```, we will also push our whole dependencies folder ```vendor```. Since Cloud Foundry runs ```glide install``` anyways, this is redundant. To save bandwidth and time you can create a ```.cfignore``` file which works just like a ```.gitignore``` file and tells CloudFoundry what files should be excluded when pushing.
