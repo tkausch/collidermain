@@ -25,7 +25,7 @@ $ go run mycollider.go
 brew install glide
 ```  
 
-2. Update and install dependencies with glide. When an app is deployed App Cloud reads the glide.yaml file and installs the appropriate depencencies. Run `glide install```command in your local directory to install the dependencies, preparing your system for running the app locally. The command will create a glide.lock file. It is good practice to push this lock file to the cloud as well since it specifies which versions of depencencies to install exactly. 
+2. Update and install dependencies with glide. When an app is deployed App Cloud reads the ```glide.yaml``` file and installs the appropriate depencencies. Run ```glide install```command in your local directory to install the dependencies, preparing your system for running the app locally. The command will create a ```glide.lock``` file. It is good practice to push this ```.lock``` file to the cloud as well since it specifies which versions of depencencies to install exactly. 
 
 ```
 cd $GOPATH/src/github.com/tkausch/collidermain
@@ -33,7 +33,7 @@ glide up
 (optional:) glide install 
 ```
 
-3. Login into Cloud Foundry and push the go app. When running ```cf push``, we will also push our whole dependencies folder ```vendor```. Since Cloud Foundry runs ```glide install``` anyways, this is redundant. To save bandwidth and time you can create a ```.cfignore``` file which works just like a ```.gitignore```file and tells CloudFoundry what files should be excluded when pushing.
+3. Login into Cloud Foundry and push the go app. When running ```cf push```, we will also push our whole dependencies folder ```vendor```. Since Cloud Foundry runs ```glide install``` anyways, this is redundant. To save bandwidth and time you can create a ```.cfignore``` file which works just like a ```.gitignore``` file and tells CloudFoundry what files should be excluded when pushing.
 
 ```
 cf push mycollider
