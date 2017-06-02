@@ -7,6 +7,7 @@ A websocket-based signaling server in Go based on appartc project
 
 2. Checkout this repository
 ```
+cd $GOPATH
 go get github.com/tkausch/collidermain
 ```
 
